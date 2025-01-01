@@ -1,7 +1,7 @@
 # S3GTA
 A Eurorack effects module based on the ESP32S3
 
-<img src="docs/s3gta_frong.jpg" width="300" />
+<img src="doc/s3gta_frong.jpg" width="300" />
 
 ## Abstract
 This project builds on my previous ESP32S2 design:
