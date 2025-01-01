@@ -1,0 +1,11 @@
+idf_component_register(SRCS "main.c" "touch_ring.c" "gfx.c" "gc9a01_drvr.c"
+						"menu.c" "eb_wm8731.c" "eb_i2s.c" "eb_adc.c" 
+						"button.c" "debounce.c" "audio.c" "widgets.c" 
+						"multicore_audio.c"
+						"dsp_lib.c" "fx.c"
+						"fx_vca.c"
+						"fx_cdl.c"
+						"circbuf.c"
+						"fx_filters.c"
+						"ifilter_mg4_v1.c"
+                       INCLUDE_DIRS ".")
