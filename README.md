@@ -12,6 +12,14 @@ taking it further with a circular LCD, touch sensing and more CV inputs. It's
 based on an ESP32S3 with 4MB flash and 2MB PSRAM in the package, as well as
 dual CPU cores to potentially provide more DSP bandwidth.
 
+### What's with the name?
+I'm terrible at coming up with catchy names for my projects and this one is no
+departure from that. It breaks down thus:
+* S3 from the ESP32S3 processor
+* G from the GC9A01 LCD
+* T from the circular touch sensor
+* A from audio I/O
+
 ## Hardware
 The hardware consists of two PCBs - a front-panel board that provides the main
 Eurorack user interface including a 240x240 circular LCD with a circular touch
