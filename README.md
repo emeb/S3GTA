@@ -62,12 +62,26 @@ include good support for realtime audio processing. There are a few hiccups in
 the way it works that are commented in the source code, but overall it does a
 good job of supporting audio effects processing.
 
-I found that overall the DSP on the ESP32S3 was usable, although not as
+I found that in general the DSP on the ESP32S3 was usable, although not as
 efficient as on ARM processors. Some algorithms showed significantly higher CPU
 loading on the ESP32S3 than on ARM Cortex M7, even accounting for clock speed
 differences. Studying the disassembly of the object code suggests that the full
 DSP capability of the ESP32S3 Xtensa CPU ISA isn't being brought to bear by the
 GCC compiler - for example the available multiply-accumulate instructions were
-not used in cases where they would have reduced overall instruction counts.
+not used in cases where they may have reduced overall instruction counts.
 
+## Future work
+The UI is fairly primitive and doesn't make effective use of the circular touch
+sensor. In the initial release there are only two "soft buttons" that employ
+the touch sensor to select the current algorithm and this could be extended
+to allow more soft buttons, deeper menuing and even continuously variable
+adjustmets for things like on-board modulation.
 
+The graphic elements on the circular LCD are also pretty tiny and hard to read
+while also not taking full advantage of the available LCD area. It would be
+interesting to "lean in" to the round nature of the display with more arcs
+and circular UI elements. Fatter lines and larger fonts would help a lot too.
+One option is to ditch the home-made graphics library I used here and try to
+leverage LVGL which is available as an external module in ESP IDF - I did a
+bit of research into this at the outset but went with my existing graphics
+for ease of porting older code.
